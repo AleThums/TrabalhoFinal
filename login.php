@@ -1,9 +1,7 @@
 <?php
-// Verifica se o formulário foi enviado
 if (isset($_POST['botao'])) {
     require_once __DIR__ . "/vendor/autoload.php";
-    require_once __DIR__ . "../validacao.php";
-
+    require_once __DIR__ . "../validacaoLogin.php";
 }
 ?>
 
@@ -18,7 +16,7 @@ if (isset($_POST['botao'])) {
 </head>
 <body>
     <form action="validacao.php" method="POST">
-        Nome de Usuário: <input name="nome" type="text" placeholder="Insira seu nome de usuário" required>
+        Nome de Usuário: <input name="email" type="email" placeholder="Insira seu email institucional" required>
         <br>
         Senha: <input name="senha" type="password" placeholder="Insira sua senha" required>
         <br>

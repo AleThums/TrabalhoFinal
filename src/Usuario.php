@@ -91,5 +91,16 @@ class Usuario implements ActiveRecord {
         }
         return $users;
     }    
+
+    public static function findByEmail($email): Usuario {
+        $conexao = new MySQL();
+        $sql = "SELECT * FROM usuario WHERE emailInstitucional = '{$email}'";
+        $resultado = $conexao->consulta($sql);
+        $senha = bcrypt($resultado[0]["senha"]);
+        $u = new Usuario($resultado[0]['emailInstitucional'], $senha, $resultado[0]['nome']);
+        $u->setIdUser($resultado[0]['idUser']);
+        return $u;
+    }
+
 }
 ?>
