@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22/11/2024 às 12:59
+-- Tempo de geração: 22/11/2024 às 13:51
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -33,6 +33,27 @@ CREATE TABLE `filme` (
   `descricao` varchar(300) NOT NULL,
   `idFilme` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `filme`
+--
+
+INSERT INTO `filme` (`nome`, `caminhoFoto`, `descricao`, `idFilme`) VALUES
+('Annabelle', 'uploads/annabelle.png', 'Filme de terror sobre uma boneca possuída por um espírito maligno.', 1),
+('Enrolados', 'uploads/enrolados.png', 'Uma versão moderna do conto de Rapunzel, com muita aventura e humor.', 2),
+('Harry Potter e a Pedra Filosofal', 'uploads/harry_potter1.png', 'O jovem Harry Potter descobre que é um bruxo e começa sua jornada na escola de magia.', 3),
+('Harry Potter e a Câmara Secreta', 'uploads/harry_potter2.png', 'Harry Potter enfrenta perigos na escola de magia, incluindo a descoberta de uma câmara secreta.', 4),
+('Harry Potter e o Prisioneiro de Azkaban', 'uploads/harry_potter3.png', 'Harry encontra o prisioneiro fugitivo Sirius Black e descobre segredos sobre seu passado.', 5),
+('Harry Potter e o Cálice de Fogo', 'uploads/harry_potter4.png', 'Harry é misteriosamente inscrito no Torneio Tribruxo e enfrenta perigos em várias provas.', 6),
+('Harry Potter e a Ordem da Fênix', 'uploads/harry_potter5.png', 'Harry forma a Ordem da Fênix para enfrentar Lord Voldemort e seus seguidores.', 7),
+('Harry Potter e o Príncipe Mestres da Morte', 'uploads/harry_potter6.png', 'Harry aprende mais sobre a história de Voldemort e busca formas de derrotá-lo.', 8),
+('Harry Potter e as Relíquias da Morte: Parte 1', 'uploads/harry_potter7.png', 'Harry, Hermione e Ron tentam destruir as horcruxes para derrotar Voldemort.', 9),
+('Harry Potter e as Relíquias da Morte: Parte 2', 'uploads/harry_potter8.png', 'A batalha final contra Voldemort ocorre enquanto Harry luta para salvar o mundo bruxo.', 10),
+('Jogos Vorazes', 'uploads/jogos_vorazes1.png', 'Em um futuro distópico, Katniss Everdeen luta pela sobrevivência no brutal jogo de TV.', 11),
+('Jogos Vorazes: Em Chamas', 'uploads/jogos_vorazes2.png', 'Katniss volta para os Jogos Vorazes e se torna um símbolo de rebelião.', 12),
+('O Menino do Pijama Listrado', 'uploads/menino_pijama.png', 'A história de uma amizade improvável entre um menino e o filho de um oficial nazista durante a Segunda Guerra Mundial.', 13),
+('Procurando Nemo', 'uploads/procurando_nemo.png', 'Marlin, um peixe, viaja pelo oceano para encontrar seu filho perdido, Nemo.', 14),
+('Toy Story', 'uploads/toy_story.png', 'Os brinquedos de Andy ganham vida quando ele não está por perto e enfrentam aventuras incríveis.', 15);
 
 -- --------------------------------------------------------
 
@@ -100,7 +121,7 @@ ALTER TABLE `voto`
 -- AUTO_INCREMENT de tabela `filme`
 --
 ALTER TABLE `filme`
-  MODIFY `idFilme` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFilme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
