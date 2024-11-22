@@ -1,0 +1,15 @@
+{
+    "name": "aluno/trabalho-final",
+    "authors": [
+        {
+            "name": "AleThums",
+            "email": "mikaeloklein@gmail.com"
+        }
+    ],
+    "require": {}, 
+    "autoload":{
+        "psr-4":{
+            "":"/src"
+        }
+    }
+}
