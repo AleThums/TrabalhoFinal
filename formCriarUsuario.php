@@ -10,7 +10,7 @@ if (isset($_POST['botao'])) {
 
     // Verifica se o e-mail é válido
     if (!$email) {
-        die("E-mail inválido! Tente novamente.");
+        die("E-mail inválido! Tente novamente!");
     }
 
     // Gera um hash seguro para a senha
